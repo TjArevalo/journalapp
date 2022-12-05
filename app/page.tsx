@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
-import PocketBase, { ListResult } from 'pocketbase';
+import PocketBase from 'pocketbase';
 import { TiDelete } from "react-icons/ti"
 import { FiEdit3 } from "react-icons/fi"
 import Link from 'next/link';
@@ -59,20 +59,20 @@ export default function HomePage() {
         {entries?.map((entry) => {
           return (
             <div className="flex align-middle bg-zinc-100 bg-opacity-40 w-2/5 my-3 p-2 rounded-lg" key={entry.id}>
-            <h2 className="text-base text-white truncate w-10/12">
-              {entry.title}
-            </h2>
-            <Link href="/editentry" className="w-1/12 flex cursor-pointer justify-center">
-              <FiEdit3 size={24}/>
-            </Link>
-            <div className="w-1/12 flex cursor-pointer justify-center" onClick={(e) => deleteEntry(e, entry.id)}>
-              <TiDelete size={24}/>
+              <h2 className="text-base text-white truncate w-10/12">
+                {entry.title}
+              </h2>
+              <Link href={{ pathname: `/editentry/${entry.id}`, query: {id: entry.id}} } className="w-1/12 flex cursor-pointer justify-center">
+                <FiEdit3 size={24}/>
+              </Link>
+              <div className="w-1/12 flex cursor-pointer justify-center" onClick={(e) => deleteEntry(e, entry.id)}>
+                <TiDelete size={24}/>
+              </div>
             </div>
-          </div>
           )
         })}
 
       </div>
-    </div>
+    </div> 
   )
 }
