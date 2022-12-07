@@ -57,8 +57,8 @@ export default function HomePage() {
         
         {entries?.map((entry) => {
           return (
-            <div className="flex align-middle bg-zinc-100 bg-opacity-40 w-2/5 my-3 p-2 rounded-lg" key={entry.id}>
-              <Link href={`/entry/${entry.id}`} id={entry.id} className="text-base text-white truncate w-10/12">
+            <div className="flex justify-between bg-zinc-100 bg-opacity-40 w-2/5 my-3 p-2 rounded-lg" key={entry.id}>
+              <Link href={`/entry/${entry.id}`} id={entry.id} className="text-base text-white truncate w-11/12">
                 {entry.title}
               </Link>
               <div className="w-1/12 flex cursor-pointer justify-center" onClick={(e) => deleteEntry(e, entry.id)}>

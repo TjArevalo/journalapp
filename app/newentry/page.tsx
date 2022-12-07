@@ -55,7 +55,7 @@ export default function newentry() {
   return (
     <div className="flex flex-col items-center">
       <div className="w-3/5 px-6">
-        <form action="/" method="post" className="flex flex-col items-center h-screen" onSubmit={sendReq}>
+        <form action="/" method="post" className="flex flex-col items-center h-screen" spellCheck="true" onSubmit={sendReq}>
           <label htmlFor="title" className="text-xl text-white text-left my-4 w-full">           
             <p className="text-white text-lg" >{date}</p>
           </label>
