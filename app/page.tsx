@@ -54,7 +54,6 @@ export default function HomePage() {
     <div className="text-4xl">
       <h1 className="text-white text-center py-4"> Welcome back, James</h1>
       <div className="grid width-9/12 text-center justify-items-center">
-        
         {entries?.map((entry) => {
           return (
             <div className="flex justify-between bg-zinc-100 bg-opacity-40 w-2/5 my-3 p-2 rounded-lg" key={entry.id}>
