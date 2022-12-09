@@ -11,9 +11,9 @@ import { IoHome } from 'react-icons/io5';
 export default function RootLayout({children}: {children: React.ReactNode}) {
 
   return (
-    <html className="overflow-hidden">
+    <html className='max-h-screen'>
       <head />
-      <body className="flex flex-col bg-[url('../assets/background.jpg')] bg-cover">
+      <body className="flex flex-col min-h-screen bg-[url('../assets/background.jpg')] bg-cover overflow-hidden">
 
         {/* Navbar */}
         <nav className="flex w-screen flex-row-reverse justify-items-center justify-between bg-zinc-400 bg-opacity-70 py-4">
