@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useRouter } from 'next/navigation'
 import PocketBase from 'pocketbase';
 
 export default function NewEntry() {
@@ -14,7 +13,6 @@ export default function NewEntry() {
   const [month, setMonth] = useState(0);
   const [year, setYear] = useState(0);
   const date = `${month + 1}/${day}/${year}`
-  const router = useRouter();
 
   useEffect(()=>{
     setInterval(()=>{
@@ -42,10 +40,8 @@ export default function NewEntry() {
     });
   }
 
-  setTimeout(sendReq,500)
-
   return (
-    <div className="flex flex-col items-center w-screen">
+    <div id ="newEntry" className="flex flex-col items-center w-screen">
       <div className="w-3/5 px-6">
         <form action="/" method="post" className="flex flex-col items-center h-screen" spellCheck="true" onSubmit={sendReq}>
           <label htmlFor="title" className="text-xl text-white text-left my-4 w-full">           

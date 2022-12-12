@@ -50,10 +50,9 @@ export default function HomePage() {
 
   console.log(entries)
   return (
-    <div className="text-4xl">
-      <h1 className="text-white text-center py-4"> Welcome back, James</h1>
-      <div className="flex flex-col bg-red-500 items-center width-9/12 h-full overflow-auto grow">
-
+    <div id="HomePage" className="flex flex-col max-h-screen">
+      <h1 className="text-4xl text-white text-center py-4 w-screen"> Welcome back, James</h1>
+      <div className="flex flex-col items-center width-screen overflow-y-scroll scrollbar-hide">
 
         {entries?.length == 0?
           <div className="w-1/5 h-12 px-4 py-2 flex justify-center rounded-lg bg-blue-500 opacity-75 text-white text-center">
@@ -64,7 +63,7 @@ export default function HomePage() {
           :
           entries?.map((entry) => {
             return (
-              <div className="flex justify-between h-12 bg-zinc-100 bg-opacity-40 w-2/5 my-3 p-2 rounded-lg text-center" key={entry.id}>
+              <div className="flex justify-between h-10 bg-zinc-100 bg-opacity-40 w-2/5 my-2 p-2 rounded-lg text-center" key={entry.id}>
                 <Link href={`/entry/${entry.id}`} id={entry.id} className="text-base text-white truncate w-11/12">
                   {entry.title}
                 </Link>
@@ -75,7 +74,6 @@ export default function HomePage() {
             )
           })
         }
-
       </div>
     </div> 
   )

@@ -79,7 +79,7 @@ export default function IDEntry(id:ID) {
 
 
   return (
-    <div className="flex flex-col items-center">
+    <div id="entryEdit" className="flex flex-col items-center">
       <div className="w-3/5 px-6">
         <form action="/" method="put" className="flex flex-col items-center h-screen" onSubmit={updateReq}>
 

@@ -11,12 +11,12 @@ import { IoHome } from 'react-icons/io5';
 export default function RootLayout({children}: {children: React.ReactNode}) {
 
   return (
-    <html className='max-h-screen'>
+    <html className='min-h-screen'>
       <head />
-      <body className="flex flex-col min-h-screen bg-[url('../assets/background.jpg')] bg-cover overflow-hidden">
+      <body className="flex flex-col max-h-screen max-w-screen bg-[url('../assets/background.jpg')] bg-cover overflow-hidden">
 
         {/* Navbar */}
-        <nav className="flex w-screen flex-row-reverse justify-items-center justify-between bg-zinc-400 bg-opacity-70 py-4">
+        <nav id="navbar" className="flex w-screen flex-row-reverse justify-items-center justify-between bg-zinc-400 bg-opacity-70 py-4">
           <div id="Dropdown menu" className="absolute z-50 left-0 w-1/4">
             <Menu as= "div">
 
